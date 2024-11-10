@@ -1,0 +1,10 @@
+flask
+behave
+flask_cors
+pytest
+pytest-cov
+boto3
+psycopg2-binary
+opentelemetry-instrumentation-flask
+opentelemetry-distro
+opentelemetry-distro[otlp]

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jogo-adivinhacao-frontend
+  namespace: ms
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: microservico
+  template:
+    metadata:
+      labels:
+        service: microservico
+        version: "v1.0"
+    spec:
+      containers:
+      - name: jogo-adivinhacao-frontend
+        image: wyller/jogo-advinhacao-pos-puc-frontend:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: "backend-service"

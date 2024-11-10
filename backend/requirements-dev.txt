@@ -1,0 +1,7 @@
+flask
+behave
+flask_cors
+pytest
+pytest-cov
+behave-webdriver
+psycopg2-binary
